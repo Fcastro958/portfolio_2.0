@@ -71,8 +71,8 @@ canvas {
   }
 
   blockquote p {
-    color: black;
-    background-color: white;
+    color: white;
+    background: var(--dark-bg);
     font-size: 4rem;
     display: flex;
     align-items: center;

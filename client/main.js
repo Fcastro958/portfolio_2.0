@@ -8,8 +8,19 @@ const renderer = new THREE.WebGLRenderer({
 });
 renderer.setPixelRatio( window.devicePixelRatio );
 renderer.setSize( window.innerWidth, window.innerHeight );
-camera.position.setZ(30);
-renderer.render( scene, camera );
+window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+
+if (window.innerWidth < 768) {
+    camera.position.setZ(10);
+} else {
+    camera.position.setZ(30);
+}
+  
 const geometry = new THREE.TorusGeometry( 10, 3, 16, 100 );
 const material = new THREE.MeshStandardMaterial( { color: 0xFF6347 } );
 const torus = new THREE.Mesh( geometry, material );

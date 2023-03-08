@@ -20,13 +20,14 @@
     padding: 10vh 0;
     
     display: grid;
+    align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: var(--spacing);
   }
   
-  h1, h2, h3, blockquote {
+  h1, h2, h3, blockquote{
     font-family: elevon, sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     font-style: normal;
   }
   
@@ -51,21 +52,27 @@
     font-size: 1.25rem;
     line-height: 1.5;
     margin-bottom: var(--spacing);
+    border-radius: 50%;
   }
+
   
   blockquote {
-    margin: 0;
-    padding: 0;
-    margin-bottom: var(--spacing);
+    font-size: 4rem;
+    line-height: 1;
+    background-color: white !important;
+    color: black !important;
+    padding: 0px !important;
+
   }
   
-  blockquote p {
-    color: black;
-    background-color: white;
+blockquote p {
     font-size: 4rem;
-    display: inline;
-    line-height: 1;
+    line-height: 3; /* increase the line-height value */
+    background-color: white !important;
+    color: black !important;
+    padding: 20px !important;
   }
+  
   
   .left {
     grid-column: 6 / 12;
@@ -89,6 +96,7 @@
     blockquote p {
       font-size: 2.5rem;
     } 
+}
 
 
 
